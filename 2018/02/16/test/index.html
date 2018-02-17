@@ -9,7 +9,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-    <title>ZX&#39;s Blog</title>
+    <title>test · ZX&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -252,6 +252,8 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
@@ -259,97 +261,126 @@
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
     
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >ZX&#39;s Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">test</a>
+            </div>
+    </div>
+    
     <a class="home-link" href=/>ZX's Blog</a>
 </header>
     <div class="wrapper">
         <div class="site-intro">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            test
+            <!-- 404 -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = Test>Test</a>
+    
+</div>
+            
+            <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = "/static/api/js/share.js"];</script>
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/02/16</span>
+                
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe604;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">
+                        &#xe601;
+                    </span>
+                    <span class="bdsharebuttonbox">
+                        <a href="#" class="bds_more shareText" data-cmd="more">Share</a>
+                    </span>
+                </span>
+            </div>
         
     </div>
 </div>
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
 
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/02/16/test/" >
-                
-                    <span>test</span>
-            </a>
-            <div class="abstract-content">
-                A Guide to TF Layers: Building a Convolutional Neural Network#技术备忘/TensorFlow
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="A-Guide-to-TF-Layers-Building-a-Convolutional-Neural-Network"><a href="#A-Guide-to-TF-Layers-Building-a-Convolutional-Neural-Network" class="headerlink" title="A Guide to TF Layers: Building a Convolutional Neural Network"></a>A Guide to TF Layers: Building a Convolutional Neural Network</h1><p>#技术备忘/TensorFlow</p>
+<hr>
+<p>Convolutional Neural Network - 卷积神经网络</p>
+<hr>
+<p>Supplemental Materials</p>
+<ul>
+<li style="list-style: none"><input type="checkbox"> <a href="https://www.tensorflow.org/tutorials/layers" target="_blank" rel="noopener">A Guide to TF Layers: Building a Convolutional Neural Network  |  TensorFlow</a></li>
+<li style="list-style: none"><input type="checkbox"> <a href="https://www.coursera.org/specializations/deep-learning?authMode=login#about" target="_blank" rel="noopener">Deep Learning | Coursera</a></li>
+<li style="list-style: none"><input type="checkbox" checked> <a href="http://www.ruanyifeng.com/blog/2017/07/neural-network.html" target="_blank" rel="noopener">神经网络入门 - 阮一峰的网络日志</a></li>
+<li style="list-style: none"><input type="checkbox" checked> <a href="http://playground.tensorflowjiaocheng.com/#activation=tanh&amp;batchSize=10&amp;dataset=circle&amp;regDataset=reg-plane&amp;learningRate=0.03&amp;regularizationRate=0&amp;noise=0&amp;networkShape=4,2&amp;seed=0.87697&amp;showTestData=false&amp;discretize=false&amp;percTrainData=50&amp;x=true&amp;y=true&amp;xTimesY=false&amp;xSquared=false&amp;ySquared=false&amp;cosX=false&amp;sinX=false&amp;cosY=false&amp;sinY=false&amp;collectStats=false&amp;problem=classification&amp;initZero=false&amp;hideText=false" target="_blank" rel="noopener">好玩的神经网络</a></li>
+<li style="list-style: none"><input type="checkbox" checked> [CNN笔记：通俗理解卷积神经网络 - 结构之法 算法之道 - CSDN博客](<a href="http://blog.csdn.net/v_july_v/article/details/51812459" target="_blank" rel="noopener">http://blog.csdn.net/v_july_v/article/details/51812459</a></li>
+<li style="list-style: none"><input type="checkbox"> <a href="https://d3js.org" target="_blank" rel="noopener">D3.js - Data-Driven Documents</a>（画图的库）</li>
+<li style="list-style: none"><input type="checkbox"> <a href="http://neuralnetworksanddeeplearning.com/index.html" target="_blank" rel="noopener">Neural networks and deep learning</a></li>
+<li style="list-style: none"><input type="checkbox"> <a href="https://cs231n.github.io/convolutional-networks/" target="_blank" rel="noopener">CS231n Convolutional Neural Networks for Visual Recognition</a></li>
+</ul>
+<p><img src="/source/images/test.jpg" alt="Test"></p>
 
-Convolutional Neural Network - 卷积神经网络
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/02/16/hello-world/" title= Hello World >
+                    <div class="prevTitle">Hello World</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
 
-Supplemental Materials
+<!-- City版安装代码已完成 -->
+    
+    
+    <!--PC版-->
 
- A Guide to TF Layers: Building a Convolutional Neural Network  |  TensorFlow
- Deep Learning | Coursera
- 神经网络入门 - 阮一峰的网络日志
- 好玩的神经网络
- [CNN笔记：通俗理解卷积神经网络 - 结构...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/02/16</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
+    <!--PC版-->
+
+
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = Test>Test</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/02/16/hello-world/" >
-                
-                    <span>Hello World</span>
-            </a>
-            <div class="abstract-content">
-                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-More info: Writing
-Run server1$ hexo server
-More...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/02/16</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -409,6 +440,13 @@ More...
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#A-Guide-to-TF-Layers-Building-a-Convolutional-Neural-Network"><span class="toc-number">1.</span> <span class="toc-text">A Guide to TF Layers: Building a Convolutional Neural Network</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
