@@ -114,7 +114,7 @@
 <meta property="og:image" content="http://imglf6.nosdn.127.net/img/S1JCdTlnVmdHTnJ6a2Rac0VuNVZQeGR4ZXVpOE4zb3dLbDZrdmhQalZYY2VFZ3d4aDdtb2d3PT0.png?imageView&thumbnail=2040y1151&type=png&quality=96&stripmeta=0">
 <meta property="og:image" content="http://imglf3.nosdn.127.net/img/S1JCdTlnVmdHTnJ6a2Rac0VuNVZQL3dReHFpT0RqQ1ZNeWl0akFRbk5hL09oaFlsRXBFUnVBPT0.png?imageView&thumbnail=2071y1165&type=png&quality=96&stripmeta=0">
 <meta property="og:image" content="http://imglf3.nosdn.127.net/img/S1JCdTlnVmdHTnJ6a2Rac0VuNVZQekhrWmhtcTFDVEFJTnlxWlc1RWFmMnFuYllSZGRhUEpBPT0.png?imageView&thumbnail=2040y1572&type=png&quality=96&stripmeta=0">
-<meta property="og:updated_time" content="2018-03-13T21:04:53.181Z">
+<meta property="og:updated_time" content="2018-03-13T21:13:56.760Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MacOS下搭建Hexo静态博客">
 <meta name="twitter:description" content="介绍Hexo是一款静态博客框架，使用Hexo可以建立美观易用的个人博客，Hexo官方网站的介绍如下：  Hexo is a fast, simple and powerful blog framework. You write posts in Markdown (or other languages) and Hexo generates static files with a beautifu">
@@ -395,7 +395,7 @@
 <h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>使用Homebrew安装Node.js，在命令行输入<code>brew install node</code>即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install node</span><br></pre></td></tr></table></figure></p>
 <h3 id="配置SSH密钥"><a href="#配置SSH密钥" class="headerlink" title="配置SSH密钥"></a>配置SSH密钥</h3><h4 id="创建SSH密钥"><a href="#创建SSH密钥" class="headerlink" title="创建SSH密钥"></a>创建SSH密钥</h4><p>首先查看一下是否已经有密钥，在命令行输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/.ssh</span><br><span class="line">$ ls</span><br><span class="line">id_rsa		id_rsa.pub</span><br></pre></td></tr></table></figure></p>
 <p>若是显示出id_rsa和id_rsa.pub，则已经有了密钥，若是没有，在命令行输入以下命令创建密钥：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@youremail.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@youremail.com&quot;</span><br></pre></td></tr></table></figure>
 <p>成功后使用cd ~/.ssh进入文件夹，找到id_ras.pub文件并使用文本编辑器打开，复制其中内容。</p>
 <h4 id="提交公共秘钥"><a href="#提交公共秘钥" class="headerlink" title="提交公共秘钥"></a>提交公共秘钥</h4><p>id_rsa.pub即为你的公共秘钥，将从id_rsa.pub复制的内容添加到<a href="https://github.com/settings/keys" target="_blank" rel="noopener">Github/settings/keys</a>。</p>
 <p><img src="http://imglf3.nosdn.127.net/img/S1JCdTlnVmdHTnJ6a2Rac0VuNVZQekhrWmhtcTFDVEFJTnlxWlc1RWFmMnFuYllSZGRhUEpBPT0.png?imageView&amp;thumbnail=2040y1572&amp;type=png&amp;quality=96&amp;stripmeta=0" alt="Submit SSH Key"></p>
