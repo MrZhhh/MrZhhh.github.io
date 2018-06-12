@@ -103,18 +103,18 @@
   <meta name="keywords" content="Tensorflow," />
 
 
-<meta name="description" content="Tensorflow数据导入将本地图片数据制作成相同于数据集Cifar10 - binary version的形式根据Cifar10数据集官网的描述，一张图片在二进制文件里存在的形式为（1Byte Label + 3072Byte Image），其中每个通道分别占有32 * 32 = 1024 个Byte.  Data – a 10000x3072 numpy array of uint8s.">
+<meta name="description" content="介绍本文主要介绍Tensorflow读取本地数据的方式，目前给出了将本地图片数据制作成类似于Cifar10二进制数据集的程序。其他数据导入方式持续更新中…">
 <meta name="keywords" content="Tensorflow">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tensorflow读取本地图片数据的实现">
 <meta property="og:url" content="http://Mrzhhh.github.io/2018/03/13/tensorflow读取本地图片数据的实现/index.html">
 <meta property="og:site_name" content="ZX&#39;s Blog">
-<meta property="og:description" content="Tensorflow数据导入将本地图片数据制作成相同于数据集Cifar10 - binary version的形式根据Cifar10数据集官网的描述，一张图片在二进制文件里存在的形式为（1Byte Label + 3072Byte Image），其中每个通道分别占有32 * 32 = 1024 个Byte.  Data – a 10000x3072 numpy array of uint8s.">
+<meta property="og:description" content="介绍本文主要介绍Tensorflow读取本地数据的方式，目前给出了将本地图片数据制作成类似于Cifar10二进制数据集的程序。其他数据导入方式持续更新中…">
 <meta property="og:locale" content="Chinese & English">
-<meta property="og:updated_time" content="2018-06-12T09:20:49.107Z">
+<meta property="og:updated_time" content="2018-06-12T09:27:04.641Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tensorflow读取本地图片数据的实现">
-<meta name="twitter:description" content="Tensorflow数据导入将本地图片数据制作成相同于数据集Cifar10 - binary version的形式根据Cifar10数据集官网的描述，一张图片在二进制文件里存在的形式为（1Byte Label + 3072Byte Image），其中每个通道分别占有32 * 32 = 1024 个Byte.  Data – a 10000x3072 numpy array of uint8s.">
+<meta name="twitter:description" content="介绍本文主要介绍Tensorflow读取本地数据的方式，目前给出了将本地图片数据制作成类似于Cifar10二进制数据集的程序。其他数据导入方式持续更新中…">
 
 
 
@@ -375,7 +375,9 @@
       
 
       
-        <script src="/assets/js/APlayer.min.js"> </script><h1 id="Tensorflow数据导入"><a href="#Tensorflow数据导入" class="headerlink" title="Tensorflow数据导入"></a>Tensorflow数据导入</h1><h2 id="将本地图片数据制作成相同于数据集Cifar10-binary-version的形式"><a href="#将本地图片数据制作成相同于数据集Cifar10-binary-version的形式" class="headerlink" title="将本地图片数据制作成相同于数据集Cifar10 - binary version的形式"></a>将本地图片数据制作成相同于数据集Cifar10 - binary version的形式</h2><p>根据Cifar10数据集官网的描述，一张图片在二进制文件里存在的形式为（1Byte Label + 3072Byte Image），其中每个通道分别占有32 * 32 = 1024 个Byte.</p>
+        <script src="/assets/js/APlayer.min.js"> </script><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>本文主要介绍Tensorflow读取本地数据的方式，目前给出了将本地图片数据制作成类似于Cifar10二进制数据集的程序。<br>其他数据导入方式持续更新中…</p>
+<a id="more"></a>
+<h2 id="将本地图片数据制作成相同于数据集Cifar10-binary-version的形式"><a href="#将本地图片数据制作成相同于数据集Cifar10-binary-version的形式" class="headerlink" title="将本地图片数据制作成相同于数据集Cifar10 - binary version的形式"></a>将本地图片数据制作成相同于数据集Cifar10 - binary version的形式</h2><p>根据Cifar10数据集官网的描述，一张图片在二进制文件里存在的形式为（1Byte Label + 3072Byte Image），其中每个通道分别占有32 * 32 = 1024 个Byte.</p>
 <blockquote>
 <p>Data – a 10000x3072 numpy array of uint8s. Each row of the array stores a 32x32 colour image. The first 1024 entries contain the red channel values, the next 1024 the green, and the final 1024 the blue. The image is stored in row-major order, so that the first 32 entries of the array are the red channel values of the first row of the image.<br>Labels – a list of 10000 numbers in the range 0-9. The number at index i indicates the label of the ith image in the array data.  </p>
 </blockquote>
@@ -414,15 +416,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/13/MacOS_Hexo/" rel="next" title="MacOS下搭建Hexo静态博客">
-                <i class="fa fa-chevron-left"></i> MacOS下搭建Hexo静态博客
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/13/MacOS_Hexo/" rel="prev" title="MacOS下搭建Hexo静态博客">
+                MacOS下搭建Hexo静态博客 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -587,7 +589,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tensorflow数据导入"><span class="nav-number">1.</span> <span class="nav-text">Tensorflow数据导入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#将本地图片数据制作成相同于数据集Cifar10-binary-version的形式"><span class="nav-number">1.1.</span> <span class="nav-text">将本地图片数据制作成相同于数据集Cifar10 - binary version的形式</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#将本地图片数据制作成相同于数据集Cifar10-binary-version的形式"><span class="nav-number">1.1.</span> <span class="nav-text">将本地图片数据制作成相同于数据集Cifar10 - binary version的形式</span></a></li></ol></li></ol></div>
             
 
           </div>
