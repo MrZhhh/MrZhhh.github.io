@@ -100,27 +100,28 @@
 
 
   
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Tensorflow," />
 
 
-<meta name="description" content="一个默默无闻的文艺青年。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ABOUT">
-<meta property="og:url" content="http://Mrzhhh.github.io/about/index.html">
+<meta name="description" content="Tensorflow数据导入将本地图片数据制作成相同于数据集Cifar10 - binary version的形式根据Cifar10数据集官网的描述，一张图片在二进制文件里存在的形式为（1Byte Label + 3072Byte Image），其中每个通道分别占有32 * 32 = 1024 个Byte.  Data – a 10000x3072 numpy array of uint8s.">
+<meta name="keywords" content="Tensorflow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tensorflow读取本地图片数据的实现">
+<meta property="og:url" content="http://Mrzhhh.github.io/2018/03/13/tensorflow读取本地图片数据的实现/index.html">
 <meta property="og:site_name" content="ZX&#39;s Blog">
-<meta property="og:description" content="一个默默无闻的文艺青年。">
+<meta property="og:description" content="Tensorflow数据导入将本地图片数据制作成相同于数据集Cifar10 - binary version的形式根据Cifar10数据集官网的描述，一张图片在二进制文件里存在的形式为（1Byte Label + 3072Byte Image），其中每个通道分别占有32 * 32 = 1024 个Byte.  Data – a 10000x3072 numpy array of uint8s.">
 <meta property="og:locale" content="Chinese & English">
-<meta property="og:updated_time" content="2018-03-13T21:19:38.513Z">
+<meta property="og:updated_time" content="2018-06-12T09:20:49.107Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ABOUT">
-<meta name="twitter:description" content="一个默默无闻的文艺青年。">
+<meta name="twitter:title" content="Tensorflow读取本地图片数据的实现">
+<meta name="twitter:description" content="Tensorflow数据导入将本地图片数据制作成相同于数据集Cifar10 - binary version的形式根据Cifar10数据集官网的描述，一张图片在二进制文件里存在的形式为（1Byte Label + 3072Byte Image），其中每个通道分别占有32 * 32 = 1024 个Byte.  Data – a 10000x3072 numpy array of uint8s.">
 
 
 
 
 
 
-  <link rel="canonical" href="http://Mrzhhh.github.io/about/"/>
+  <link rel="canonical" href="http://Mrzhhh.github.io/2018/03/13/tensorflow读取本地图片数据的实现/"/>
 
 
 
@@ -129,7 +130,7 @@
     sidebar: "",
   };
 </script>
-  <title>ABOUT | ZX's Blog</title>
+  <title>Tensorflow读取本地图片数据的实现 | ZX's Blog</title>
   
 
 
@@ -268,49 +269,193 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Mrzhhh.github.io/2018/03/13/tensorflow读取本地图片数据的实现/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZX">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZX's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">ABOUT</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <script src="/assets/js/APlayer.min.js"> </script><p>一个默默无闻的文艺青年。</p>
-
+          <h1 class="post-title" itemprop="name headline">Tensorflow读取本地图片数据的实现</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-13T16:08:31+08:00">2018-03-13</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             Views: 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <script src="/assets/js/APlayer.min.js"> </script><h1 id="Tensorflow数据导入"><a href="#Tensorflow数据导入" class="headerlink" title="Tensorflow数据导入"></a>Tensorflow数据导入</h1><h2 id="将本地图片数据制作成相同于数据集Cifar10-binary-version的形式"><a href="#将本地图片数据制作成相同于数据集Cifar10-binary-version的形式" class="headerlink" title="将本地图片数据制作成相同于数据集Cifar10 - binary version的形式"></a>将本地图片数据制作成相同于数据集Cifar10 - binary version的形式</h2><p>根据Cifar10数据集官网的描述，一张图片在二进制文件里存在的形式为（1Byte Label + 3072Byte Image），其中每个通道分别占有32 * 32 = 1024 个Byte.</p>
+<blockquote>
+<p>Data – a 10000x3072 numpy array of uint8s. Each row of the array stores a 32x32 colour image. The first 1024 entries contain the red channel values, the next 1024 the green, and the final 1024 the blue. The image is stored in row-major order, so that the first 32 entries of the array are the red channel values of the first row of the image.<br>Labels – a list of 10000 numbers in the range 0-9. The number at index i indicates the label of the ith image in the array data.  </p>
+</blockquote>
+<p>完整程序如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">import cv2</span><br><span class="line">import numpy as np</span><br><span class="line">import time</span><br><span class="line"></span><br><span class="line">file_dir = &quot;Your image dir&quot;</span><br><span class="line"></span><br><span class="line">for file in os.listdir(file_dir):</span><br><span class="line"></span><br><span class="line">    img = cv2.imread(file_dir + file)</span><br><span class="line">    img = cv2.resize(img,(32, 32))</span><br><span class="line">    if img is None:</span><br><span class="line">        continue</span><br><span class="line"></span><br><span class="line">    b = img[:,:,0].flatten()</span><br><span class="line">    g = img[:,:,1].flatten()</span><br><span class="line">    r = img[:,:,2].flatten()</span><br><span class="line">    label = [0]</span><br><span class="line"></span><br><span class="line">    out = np.array(list(label) + list(r) + list(g) + list(b),np.uint8)</span><br><span class="line">    print(out)</span><br><span class="line">    out.tofile(&quot;Your output dir&quot;)</span><br><span class="line"></span><br><span class="line">print(&quot;All set!&quot;)</span><br></pre></td></tr></table></figure>
+
       
     </div>
+
     
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Tensorflow/" rel="tag"># Tensorflow</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/13/MacOS_Hexo/" rel="next" title="MacOS下搭建Hexo静态博客">
+                <i class="fa fa-chevron-left"></i> MacOS下搭建Hexo静态博客
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
 
-    
-    
-    
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNDIxMy8xMDc1MQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -331,8 +476,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -423,6 +577,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tensorflow数据导入"><span class="nav-number">1.</span> <span class="nav-text">Tensorflow数据导入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#将本地图片数据制作成相同于数据集Cifar10-binary-version的形式"><span class="nav-number">1.1.</span> <span class="nav-text">将本地图片数据制作成相同于数据集Cifar10 - binary version的形式</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -609,6 +779,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
