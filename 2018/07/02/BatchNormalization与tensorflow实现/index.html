@@ -103,18 +103,18 @@
   <meta name="keywords" content="Tensorflow," />
 
 
-<meta name="description" content="Batch Normalization - tensorflowtf.nn.momentstf.nn.moments(    x,    axes,    shift=None,    name=None,    keep_dims=False) Args:x: A Tensor.axes: Array of ints. Axes along which to compute mean and">
+<meta name="description" content="Batch Normalization - tensorflowtf.nn.momentstf.nn.moments(    x,    axes,    shift=None,    name=None,    keep_dims=False)">
 <meta name="keywords" content="Tensorflow">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Batch Normalization">
 <meta property="og:url" content="http://Mrzhhh.github.io/2018/07/02/BatchNormalization与tensorflow实现/index.html">
 <meta property="og:site_name" content="ZX&#39;s Blog">
-<meta property="og:description" content="Batch Normalization - tensorflowtf.nn.momentstf.nn.moments(    x,    axes,    shift=None,    name=None,    keep_dims=False) Args:x: A Tensor.axes: Array of ints. Axes along which to compute mean and">
+<meta property="og:description" content="Batch Normalization - tensorflowtf.nn.momentstf.nn.moments(    x,    axes,    shift=None,    name=None,    keep_dims=False)">
 <meta property="og:locale" content="Chinese & English">
-<meta property="og:updated_time" content="2018-07-04T07:50:33.526Z">
+<meta property="og:updated_time" content="2018-07-04T07:56:03.219Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Batch Normalization">
-<meta name="twitter:description" content="Batch Normalization - tensorflowtf.nn.momentstf.nn.moments(    x,    axes,    shift=None,    name=None,    keep_dims=False) Args:x: A Tensor.axes: Array of ints. Axes along which to compute mean and">
+<meta name="twitter:description" content="Batch Normalization - tensorflowtf.nn.momentstf.nn.moments(    x,    axes,    shift=None,    name=None,    keep_dims=False)">
 
 
 
@@ -378,8 +378,8 @@
       
 
       
-        <script src="/assets/js/APlayer.min.js"> </script><a id="more"></a>
-<h2 id="Batch-Normalization-tensorflow"><a href="#Batch-Normalization-tensorflow" class="headerlink" title="Batch Normalization - tensorflow"></a>Batch Normalization - tensorflow</h2><p>tf.nn.moments<br>tf.nn.moments(<br>    x,<br>    axes,<br>    shift=None,<br>    name=None,<br>    keep_dims=False<br>)</p>
+        <script src="/assets/js/APlayer.min.js"> </script><h2 id="Batch-Normalization-tensorflow"><a href="#Batch-Normalization-tensorflow" class="headerlink" title="Batch Normalization - tensorflow"></a>Batch Normalization - tensorflow</h2><p>tf.nn.moments<br>tf.nn.moments(<br>    x,<br>    axes,<br>    shift=None,<br>    name=None,<br>    keep_dims=False<br>)</p>
+<a id="more"></a>
 <p>Args:<br>x: A Tensor.<br>axes: Array of ints. Axes along which to compute mean and variance.<br>shift: Not used in the current implementation<br>name: Name used to scope the operations that compute the moments.<br>keep_dims: produce moments with the same dimensionality as the input.</p>
 <p>Returns:<br>Two Tensor objects: mean and variance.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import tensorflow as tf</span><br><span class="line"></span><br><span class="line">def bn(x,name=&quot;bn&quot;):</span><br><span class="line">    axes = [d for d in range(len(x.get_shape()))]</span><br><span class="line">    beta = tf.get_variable(&quot;beta&quot;, shape=[],initializer=tf.constant_initializer(0.0))</span><br><span class="line">    gamma= tf.get_variable(&quot;gamma&quot;,shape=[],initializer=tf.constant_initializer(1.0))</span><br><span class="line">    x_mean,x_variance=tf.nn.moments(x,axes)  </span><br><span class="line">    y=tf.nn.batch_normalization(x,x_mean,x_variance,beta,gamma,1e-10,name)</span><br><span class="line">    return y</span><br></pre></td></tr></table></figure>
