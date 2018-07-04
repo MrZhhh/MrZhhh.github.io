@@ -100,26 +100,28 @@
 
 
   
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Tensorflow," />
 
 
-<meta name="description" content="默默无闻的文艺青年的小博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ZX&#39;s Blog">
-<meta property="og:url" content="http://Mrzhhh.github.io/archives/2018/03/index.html">
+<meta name="description" content="局部相应归一化局部相应归一化出自论文ImageNet Classification with Deep Convolutional Neural Networks">
+<meta name="keywords" content="Tensorflow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="局部响应归一化">
+<meta property="og:url" content="http://Mrzhhh.github.io/2018/07/02/局部响应归一化与tensorflow实现/index.html">
 <meta property="og:site_name" content="ZX&#39;s Blog">
-<meta property="og:description" content="默默无闻的文艺青年的小博客">
+<meta property="og:description" content="局部相应归一化局部相应归一化出自论文ImageNet Classification with Deep Convolutional Neural Networks">
 <meta property="og:locale" content="Chinese & English">
+<meta property="og:updated_time" content="2018-07-04T07:51:34.039Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZX&#39;s Blog">
-<meta name="twitter:description" content="默默无闻的文艺青年的小博客">
+<meta name="twitter:title" content="局部响应归一化">
+<meta name="twitter:description" content="局部相应归一化局部相应归一化出自论文ImageNet Classification with Deep Convolutional Neural Networks">
 
 
 
 
 
 
-  <link rel="canonical" href="http://Mrzhhh.github.io/archives/2018/03/"/>
+  <link rel="canonical" href="http://Mrzhhh.github.io/2018/07/02/局部响应归一化与tensorflow实现/"/>
 
 
 
@@ -128,7 +130,7 @@
     sidebar: "",
   };
 </script>
-  <title>Archive | ZX's Blog</title>
+  <title>局部响应归一化 | ZX's Blog</title>
   
 
 
@@ -175,7 +177,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -265,80 +267,220 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        Um..! 6 posts in total. Keep on posting.
-      </span>
-      
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Mrzhhh.github.io/2018/07/02/局部响应归一化与tensorflow实现/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZX">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZX's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/03/13/MacOS_Hexo/" itemprop="url">
-              
-                <span itemprop="name">MacOS下搭建Hexo静态博客</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">局部响应归一化</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-13T16:08:31+08:00"
-              content="2018-03-13" >
-          03-13
-        </time>
-      </div>
+        <div class="post-meta">
 
-    </header>
-  </article>
+          
 
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-02T00:00:00+08:00">2018-07-02</time>
+            
 
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             Views: 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <script src="/assets/js/APlayer.min.js"> </script><h2 id="局部相应归一化"><a href="#局部相应归一化" class="headerlink" title="局部相应归一化"></a>局部相应归一化</h2><p>局部相应归一化出自论文<a href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks" target="_blank" rel="noopener">ImageNet Classification with Deep Convolutional Neural Networks</a></p>
+<a id="more"></a>
+<blockquote>
+<p>@incollection{NIPS2012_4824,<br>title = {ImageNet Classification with Deep Convolutional Neural Networks},<br>author = {Alex Krizhevsky and Sutskever, Ilya and Hinton, Geoffrey E},<br>booktitle = {Advances in Neural Information Processing Systems 25},<br>editor = {F. Pereira and C. J. C. Burges and L. Bottou and K. Q. Weinberger},<br>pages = {1097–1105},<br>year = {2012},<br>publisher = {Curran Associates, Inc.},<br>url = {<a href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf}" target="_blank" rel="noopener">http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf}</a><br>}  </p>
+</blockquote>
+<p>参数表示：</p>
+<p>i：代表下标，你要计算像素值的下标，从0计算起</p>
+<p>j：平方累加索引，代表从j～i的像素值平方求和</p>
+<p>x,y：像素的位置，公式中用不到</p>
+<p>a：代表feature map里面的 i 对应像素的具体值</p>
+<p>N：每个feature map里面最内层向量的列数</p>
+<p>k：超参数，由原型中的blas指定</p>
+<p>α：超参数，由原型中的alpha指定</p>
+<p>n/2：超参数，由原型中的deepth_radius指定</p>
+<p>β：超参数，由原型中的belta指定</p>
+<h2 id="局部响应归一化函数-tensor-flow"><a href="#局部响应归一化函数-tensor-flow" class="headerlink" title="局部响应归一化函数 - tensor flow"></a>局部响应归一化函数 - tensor flow</h2><p> tf.nn.local_response_normalization</p>
+<p>Aliases:</p>
+<ul>
+<li>tf.nn.local_response_normalization</li>
+<li>tf.nn.lrn</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.local_response_normalization(</span><br><span class="line">    input,</span><br><span class="line">    depth_radius=5,</span><br><span class="line">    bias=1,</span><br><span class="line">    alpha=1,</span><br><span class="line">    beta=0.5,</span><br><span class="line">    name=None</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>Args:<br>input: A Tensor. Must be one of the following types: half, bfloat16, float32. 4-D.<br>depth_radius: An optional int. Defaults to 5. 0-D. Half-width of the 1-D normalization window.<br>bias: An optional float. Defaults to 1. An offset (usually positive to avoid dividing by 0).<br>alpha: An optional float. Defaults to 1. A scale factor, usually positive.<br>beta: An optional float. Defaults to 0.5. An exponent.<br>name: A name for the operation (optional).</p>
+<p>Returns:<br>A Tensor. Has the same type as input.</p>
+
+      
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Tensorflow/" rel="tag"># Tensorflow</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/30/毕业一周年记/" rel="next" title="毕业一周年记">
+                <i class="fa fa-chevron-left"></i> 毕业一周年记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/02/BatchNormalization与tensorflow实现/" rel="prev" title="Batch Normalization">
+                Batch Normalization <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNDIxMy8xMDc1MQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -359,8 +501,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -455,6 +606,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#局部相应归一化"><span class="nav-number">1.</span> <span class="nav-text">局部相应归一化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#局部响应归一化函数-tensor-flow"><span class="nav-number">2.</span> <span class="nav-text">局部响应归一化函数 - tensor flow</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -607,6 +774,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.4"></script>
+
+
 
   
 
@@ -631,6 +802,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
